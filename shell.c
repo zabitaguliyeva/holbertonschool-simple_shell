@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
@@ -6,6 +7,15 @@
 #include <unistd.h>
 
 int main(void) {
+=======
+/**
+ * main - main func
+ *
+ * Return: int
+ */
+int main(void)
+{
+>>>>>>> 33603554c8d8f732a549d927995ac83cac0660aa
     char *buff, **arr;
     int status, i;
     pid_t pid;
@@ -32,6 +42,7 @@ int main(void) {
         if (pid == 0) {
             if (execvp(arr[0], arr) == -1) {
                 perror("ERROR");
+<<<<<<< HEAD
                 exit(2); 
             }
         } else if (pid > 0) {
@@ -44,6 +55,19 @@ int main(void) {
                 }
             }
         } else {
+=======
+                exit(1);
+            }
+        }
+        else if (pid > 0)
+        {
+		if (wait(&status) == -1)
+		{
+			perror("ERROR");
+		}
+        }
+        else
+>>>>>>> 33603554c8d8f732a549d927995ac83cac0660aa
             perror("ERROR");
         }
         if (pid == -1) {
@@ -55,4 +79,3 @@ int main(void) {
     }
     return (0);
 }
-
