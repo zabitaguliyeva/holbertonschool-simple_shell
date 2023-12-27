@@ -27,7 +27,7 @@ int main(void)
 		pid = fork();
 		if (pid == 0)
 		{
-			if (execve(arr[0], arr, NULL) == -1)
+			if (execvp(arr[0], arr) == -1)
 			{
 				perror("ERROR");
 				exit(1);
