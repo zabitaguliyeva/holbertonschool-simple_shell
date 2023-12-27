@@ -40,10 +40,7 @@ int main(void)
         }
         else if (pid > 0)
         {
-            if (wait(&status) == -1)
-            {
-                perror("ERROR");
-            }
+		waitpid(pid, &status, 2);
         }
         else
             perror("ERROR");
