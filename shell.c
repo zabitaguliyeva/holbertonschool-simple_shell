@@ -44,7 +44,7 @@ int main(void)
 			perror("ERROR");
 		if (pid == -1)
 			perror("ERROR");
-		for (i = 0; *(arr + +i); i++)
+		for (i = 0; *(arr + i); i++)
 			free(*(arr + i));
 		free(arr);
 	}
