@@ -35,7 +35,7 @@ int main(void)
             if (execvp(arr[0], arr) == -1)
             {
                 perror("ERROR");
-                exit(2);
+                exit(1);
             }
         }
         else if (pid > 0)
