@@ -9,5 +9,4 @@
 #include <fcntl.h>
 char **line_div(char *str);
 char *_getline(void);
-void print_environment();
 #endif

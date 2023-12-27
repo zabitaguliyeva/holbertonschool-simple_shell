@@ -29,14 +29,6 @@ int main(void)
             free(arr);
             break;
         }
-        else if (strcmp(arr[0], "env") == 0)
-        {
-            print_environment();
-            for (i = 0; *(arr + i); i++)
-                free(*(arr + i));
-            free(arr);
-            continue;
-        }
         pid = fork();
         if (pid == 0)
         {
