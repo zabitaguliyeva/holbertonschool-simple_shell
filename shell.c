@@ -1,7 +1,9 @@
 #include "main.h"
-#include <stdlib.h>
-#include <string.h>
-
+/**
+ * main - main func
+ *
+ * Return: int
+ */
 int main(void)
 {
     char *buff, **arr;
@@ -55,4 +57,3 @@ int main(void)
     }
     return (0);
 }
-
