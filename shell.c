@@ -7,7 +7,7 @@
 int main(void)
 {
 	char *buff, **arr;
-	int status, i, arr_freed = 0;
+	int status, i;
 	pid_t pid;
 	
 	while (1)
@@ -26,10 +26,9 @@ int main(void)
 		}
 		if (strcmp(arr[0], "exit") == 0)
 		{
-			for (i = 0; *(arr + i) != NULL; i++)
+			for (i = 0; *(arr + i); i++)
 				free(*(arr + i));
 			free(arr);
-			arr_freed = 1;
 			break;
 		}
 		pid = fork();
@@ -64,12 +63,9 @@ int main(void)
 		{
 			perror("ERROR");
 		}
-		if (!arr_freed)
-		{
-			for (i = 0; *(arr + i) == NULL; i++)
-				free(*(arr + i));
-			free(arr);
-		}
+		for (i = 0; *(arr + i); i++)
+			free(*(arr + i));
+		free(arr);
 	}
 	return (0);
 }
