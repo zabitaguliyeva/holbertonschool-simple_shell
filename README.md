@@ -1,10 +1,20 @@
-# HSH: The Holberton Shell
+<h1> Command interpreter - Simple Shell poject</h1></p>
 
 The Gates of Shell is a Holberton School project designed to delve into advanced shell program concepts, encompassing processes, system calls, bit manipulation, file management, and error handling.
+<p align="center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLtL_ToHLEo_BWFxD-yf32Ux3zfsH_NPc8Qw&usqp=CAU" width="450" height="350">
+<h1> Command interpreter - Simple Shell poject</h1></p>
+
+## BACKGROUND 🐕
+This is a colaboration project between two sfotware development students at [Holberton School](https://www.holbertonschool.com/) from Cohort 22, This project is about to create an own simple shell
+
+## SIMPLE SHELL
+Is an standard command interpretation for system.
 
 ## General
 ### Flowchart
 <p align="center"><img src="https://github.com/zabitaguliyeva/holbertonschool-simple_shell/blob/master/Shell%20flowchart.jpg"></p>
+
 ### Origins
 
 - **Original Unix Operating System:**
