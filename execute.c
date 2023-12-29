@@ -11,6 +11,7 @@ int execute(char *command)
 {
         int status = 0;
         pid_t pid = fork();
+
         if (pid == -1)
         {
                 perror("fork");
@@ -19,7 +20,7 @@ int execute(char *command)
         }
         else if (pid == 0)
         {
-                char *args[64];
+                char *arr[64];
                 line_div(command, arr);
                 if (arr[0] == NULL)
                 {
@@ -29,6 +30,7 @@ int execute(char *command)
                 if (strcmp(arr[0], "env") == 0)
                 {
                         char **env = environ;
+
                         while (*env != NULL)
                         {
                                 printf("%s\n", *env);

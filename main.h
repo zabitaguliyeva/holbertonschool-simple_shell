@@ -10,4 +10,5 @@
 char **line_div(char *command,char **arr);
 char *_getline(void);
 int execute(char *command);
+extern char **environ;
 #endif
