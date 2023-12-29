@@ -4,7 +4,7 @@ The Gates of Shell is a Holberton School project designed to delve into advanced
 
 ## General
 ### Flowchart
-![Shell Flowchart](Shell flowchart.jpg)
+<p align="center"><img src="https://github.com/zabitaguliyeva/holbertonschool-simple_shell/blob/master/Shell%20flowchart.jpg"></p>
 ### Origins
 
 - **Original Unix Operating System:**
