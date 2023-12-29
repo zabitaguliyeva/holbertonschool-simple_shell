@@ -34,7 +34,7 @@ int main(void)
 		pid = fork();
 		if (pid == 0)
 		{
-			if (execvp(arr[0], arr) == -1)
+			if (execve(arr[0], arr, NULL) == -1)
 			{
 				perror("ERROR");
 				exit(1);
@@ -67,5 +67,5 @@ int main(void)
 			free(*(arr + i));
 		free(arr);
 	}
-	return (0);
+	return (status);
 }
