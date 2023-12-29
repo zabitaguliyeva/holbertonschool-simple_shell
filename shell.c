@@ -22,7 +22,7 @@ int main(void)
 			exit(0);
 		}
 		status = execute(command);
-		if (status == 2 && isatty(STDIN_FILENO))
+		if (status == 2)
 		{
 			exit(2);
 		}
