@@ -46,6 +46,21 @@ Is an standard command interpretation for system.
   - `int main(int argc, char *argv[])`
   - `int main(int argc, char *argv[], char *envp[])`
 
+# Custom Shell Project
+
+## Header
+main.h - Where prototypes and global variables are stored.
+
+## Functions
+### `_getline`
+Function that gets the command line from the prompt.
+
+### `splitter`
+The line_div function takes a command string, tokenizes it based on spaces, tabs, and newlines, storing the resulting parsed arguments in an array, limiting it to 63 elements and terminating the array with NULL..
+
+### `execute`
+The execute function forks a child process, parses the command string, executes the command with appropriate handling for built-in commands, absolute paths, and those within the system's path, and returns the exit status of the executed command or -1 for errors..
+
 ### Execution and Control
 
 - **Program Execution via execve:**
