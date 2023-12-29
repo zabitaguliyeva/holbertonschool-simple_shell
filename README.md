@@ -6,7 +6,7 @@ The Gates of Shell is a Holberton School project designed to delve into advanced
 <h1> Command interpreter - Simple Shell poject</h1></p>
 
 ## BACKGROUND 🐕
-This is a colaboration project between two sfotware development students at [Holberton School](https://www.holbertonschool.com/) from Cohort 12, This project is about to create an own simple shell
+This is a colaboration project between two sfotware development students at [Holberton School](https://www.holbertonschool.com/) from Cohort 22, This project is about to create an own simple shell
 
 ## SIMPLE SHELL
 Is an standard command interpretation for system.
