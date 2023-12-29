@@ -3,7 +3,8 @@
 The Gates of Shell is a Holberton School project designed to delve into advanced shell program concepts, encompassing processes, system calls, bit manipulation, file management, and error handling.
 
 ## General
-
+### Flowchart
+![Shell Flowchart](path/to/Shell%20flowchart.jpg)
 ### Origins
 
 - **Original Unix Operating System:**
