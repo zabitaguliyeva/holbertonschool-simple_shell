@@ -2,28 +2,22 @@
 /**
  * line_div - splits given string into parts
  *
- * @str: given string
+ * @command: The command string to parse.
+ * @arr: An array of strings to store the parsed arguments.
  *
  * Return: modified char array.
  */
-char **line_div(char *str)
+char **line_div(char *command,char **arr)
 {
 	char *token;
-	char **arr = malloc((strlen(str) + 1) * sizeof(char *));
 	int i = 0;
 
-	token = strtok(str, " \n\t");
-	while (token != NULL)
+	token = strtok(command, " \n\t");
+	while (token != NULL && i < 63)
 	{
-	       *(arr + i) = strdup(token);
-		if (*(arr + i) == NULL)
-		{
-			free(*(arr + i));
-			exit(1);
-		}
-		i++;
+		arr[i++] = token;
 		token = strtok(NULL, " \n\t");
 	}
-	*(arr + i) = NULL;
+	arr[i++] = NULL;
 	return (arr);
 }

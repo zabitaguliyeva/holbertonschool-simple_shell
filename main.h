@@ -7,8 +7,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <fcntl.h>
-char **line_div(char *str);
+char **line_div(char *command,char **arr);
 char *_getline(void);
-extern char **environ;
-char **find_path();
+int execute(char *command);
 #endif
