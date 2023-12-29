@@ -1,42 +1,63 @@
-.TH SHELL_PROGRAM 1 "December 2023" "version 1.0" "Linux edition"
+.TH SHELL "December 2023" "version 1.0" "Linux edition"
 
 .SH NAME
-shell_program \- a simple shell program
+shell \- a simple shell program
 
 .SH SYNOPSIS
-.B shell_program
+.B shell
 
 .SH DESCRIPTION
-The shell_program is a basic shell implementation that provides a command-line interface for executing commands. It reads input from the user, parses commands, and executes them in separate processes.
+.PP
+Shell is the standard command interpreter for the system. This man page is not intended to be a tutorial or a
+     complete specification of the shell.
+
+.SS OVERVIEW
+.PP
+The shell is a command that reads lines from either a file or the termi‐
+nal, interprets them, and generally executes other commands.  It is the
+program that is running when a user logs into the system (although a user
+can select a different shell with the chsh(1) command). The shell is a command that reads lines from either a file or the termi‐
+nal, interprets them, and generally executes other commands.  It is the
+program that is running when a user logs into the system (although a user
+can select a different shell with the chsh(1) command). .PP
+
+.SS Invocations
+.PP
+If command line arguments besides the options have been specified, then
+the shell treats the first argument as the name of a file from which to
+read commands (a shell script), and the remaining arguments are set as
+the positional parameters of the shell ($1, $2, etc).  Otherwise, the
+shell reads commands from its standard input.
 
 .SH USAGE
-The shell_program operates in a loop, continually prompting for user input and executing commands. It supports basic shell functionalities.
+The shell operates in a loop, continually prompting for user input and executing commands. It supports basic shell functionalities.
 
 .SH COMMANDS
 Supported commands:
 .TP
 exit
-Exits the shell_program.
+Exits the shell.
 
 .SH OPTIONS
 This program does not take any command-line options.
 
-.SH RETURN VALUE
-The shell_program returns 0 upon successful execution. Error codes might be returned if there are issues with command execution.
 
 .SH EXAMPLES
-Running the shell_program:
-
-.B $ shell_program
+Running the shell in interactive mode:
+root@84d11a926588:~/holbertonschool-simple_shell# gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+root@84d11a926588:~/holbertonschool-simple_shell# ./hsh
+.B $ /bin/ls
+ AUTHORS     _getline.c   main.h               README.md  'Shell flowchart.jpg'
+ execute.c   hsh          man_1_simple_shell   shell.c     splitter.c
+.B $
+.B $ exit
+root@84d11a926588:~/holbertonschool-simple_shell#
 
 .SH AUTHOR
 The shell_program was developed by Ilaha Heybatova and Zabita Guliyeva.
 
 .SH SEE ALSO
 Other related commands or programs.
-
-.SH BUGS
-There might be potential bugs or issues related to input handling or command execution.
 
 .SH NOTES
 This shell_program lacks advanced features like piping, shell built-ins, and variable expansion.
